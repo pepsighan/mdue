@@ -1,6 +1,5 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import replace from '@rollup/plugin-replace';
 import pascalcase from 'pascalcase';
 import path from 'path';
 import ts from 'rollup-plugin-typescript2';
@@ -79,12 +78,7 @@ function createConfig(format, output, plugins = []) {
   output.externalLiveBindings = false;
   output.globals = { vue: 'Vue' };
 
-  const isProductionBuild = /\.prod\.js$/.test(output.file);
   const isGlobalBuild = format === 'global';
-  const isRawESMBuild = format === 'esm';
-  const isNodeBuild = format === 'cjs';
-  const isBundlerESMBuild = /esm-bundler/.test(format);
-
   if (isGlobalBuild) output.name = pascalcase(pkg.name);
 
   const shouldEmitDeclarations = !hasTSChecked;
@@ -107,70 +101,19 @@ function createConfig(format, output, plugins = []) {
   // during a single build.
   hasTSChecked = true;
 
-  const external = ['vue'];
-
-  const nodePlugins = [resolve(), commonjs()];
-
   return {
     input: `src/index.ts`,
     // Global and Browser ESM builds inlines everything so that they can be
     // used alone.
-    external,
+    external:  ['vue'],
     plugins: [
       tsPlugin,
-      createReplacePlugin(
-        isProductionBuild,
-        isBundlerESMBuild,
-        // isBrowserBuild?
-        isGlobalBuild || isRawESMBuild || isBundlerESMBuild,
-        isGlobalBuild,
-        isNodeBuild
-      ),
-      ...nodePlugins,
+      resolve(), 
+      commonjs(),
       ...plugins,
     ],
     output,
-    // onwarn: (msg, warn) => {
-    //   if (!/Circular/.test(msg)) {
-    //     warn(msg)
-    //   }
-    // },
   };
-}
-
-function createReplacePlugin(
-  isProduction,
-  isBundlerESMBuild,
-  isBrowserBuild,
-  isGlobalBuild,
-  isNodeBuild
-) {
-  const replacements = {
-    __COMMIT__: `"${process.env.COMMIT}"`,
-    __VERSION__: `"${pkg.version}"`,
-    __DEV__: isBundlerESMBuild
-      ? // preserve to be handled by bundlers
-        `(process.env.NODE_ENV !== 'production')`
-      : // hard coded dev/prod builds
-        !isProduction,
-    // this is only used during tests
-    __TEST__: isBundlerESMBuild ? `(process.env.NODE_ENV === 'test')` : false,
-    // If the build is expected to run directly in the browser (global / esm builds)
-    __BROWSER__: isBrowserBuild,
-    // is targeting bundlers?
-    __BUNDLER__: isBundlerESMBuild,
-    __GLOBAL__: isGlobalBuild,
-    // is targeting Node (SSR)?
-    __NODE_JS__: isNodeBuild,
-  };
-  // allow inline overrides like
-  //__RUNTIME_COMPILE__=true yarn build
-  Object.keys(replacements).forEach((key) => {
-    if (key in process.env) {
-      replacements[key] = process.env[key];
-    }
-  });
-  return replace(replacements);
 }
 
 function createProductionConfig(format) {
