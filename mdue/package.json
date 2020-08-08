@@ -1,6 +1,6 @@
 {
   "name": "mdue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Some awesome description",
   "main": "dist/mdue.cjs.js",
   "browser": "dist/mdue.esm.js",
