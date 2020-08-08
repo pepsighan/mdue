@@ -8,3 +8,7 @@ dist
 package-lock.json
 .DS_Store
 temp
+
+# Generated files.
+src/components
+src/index.ts
