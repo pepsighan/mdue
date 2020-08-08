@@ -26,9 +26,8 @@ const banner = `/*!
   * @license MIT
   */`;
 
-// checking for types takes a very-very long time to build. so disabled checking.
-// enable checking when testing a few components (as all components are generated).
-let hasTSChecked = true;
+// check the types for lib only once.
+let hasTSChecked = false;
 
 const outputConfigs = {
   // each file name has the format: `dist/${name}.${format}.js`
@@ -82,7 +81,6 @@ function createConfig(format, output, plugins = []) {
   const isGlobalBuild = format === 'global';
   if (isGlobalBuild) output.name = pascalcase(pkg.name);
 
-  const shouldEmitDeclarations = true;
   const tsPlugin = ts({
     check: !hasTSChecked,
     tsconfig: path.resolve(__dirname, 'tsconfig.json'),
@@ -90,8 +88,8 @@ function createConfig(format, output, plugins = []) {
     tsconfigOverride: {
       compilerOptions: {
         sourceMap: output.sourcemap,
-        declaration: shouldEmitDeclarations,
-        declarationMap: shouldEmitDeclarations,
+        declaration: !hasTSChecked,
+        declarationMap: !hasTSChecked,
       },
       exclude: ['__tests__', 'test-dts'],
     },
