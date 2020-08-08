@@ -24,7 +24,11 @@
     "LICENSE",
     "README.md"
   ],
-  "keywords": [],
+  "keywords": [
+    "Material Design",
+    "Icons",
+    "Vue"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.1",
