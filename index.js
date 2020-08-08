@@ -27,60 +27,9 @@ export const ${name}: IconComponent = defineComponent({
 const indexFileContent = `import { defineComponent, openBlock, createBlock, createVNode, ComponentPublicInstance, VNodeProps, AllowedComponentProps, ComponentCustomProps, ComponentOptionsBase, ComponentOptionsMixin } from 'vue';
 
 // This is here to optimize the type generation performance. All the components have the same type so.
-type IconComponent = (new () => ComponentPublicInstance<
-  {},
-  {},
-  {},
-  {},
-  {},
-  Record<string, any>,
-  VNodeProps & AllowedComponentProps & ComponentCustomProps,
-  ComponentOptionsBase<
-    {},
-    {},
-    {},
-    {},
-    {},
-    ComponentOptionsMixin,
-    ComponentOptionsMixin,
-    Record<string, any>,
-    string
-  >
->) &
-  ComponentOptionsBase<
-    {},
-    {},
-    {},
-    {},
-    {},
-    ComponentOptionsMixin,
-    ComponentOptionsMixin,
-    Record<string, any>,
-    string
-  > & {
-    props?: undefined;
-  } & ThisType<
-    ComponentPublicInstance<
-      {},
-      {},
-      {},
-      {},
-      {},
-      Record<string, any>,
-      Readonly<{}>,
-      ComponentOptionsBase<
-        {},
-        {},
-        {},
-        {},
-        {},
-        ComponentOptionsMixin,
-        ComponentOptionsMixin,
-        Record<string, any>,
-        string
-      >
-    >
-  >;
+type IconComponent =  (new () => ComponentPublicInstance<{}, {}, {}, {}, {}, Record<string, any>, VNodeProps & AllowedComponentProps & ComponentCustomProps, ComponentOptionsBase<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string>>) & ComponentOptionsBase<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string> & {
+  props?: undefined;
+} & ThisType<ComponentPublicInstance<{}, {}, {}, {}, {}, Record<string, any>, Readonly<{}>, ComponentOptionsBase<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string>>>;
 
 const svgCommonProps = {
   xmlns: 'http://www.w3.org/2000/svg',
