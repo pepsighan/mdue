@@ -82,8 +82,7 @@ function createConfig(format, output, plugins = []) {
   const isGlobalBuild = format === 'global';
   if (isGlobalBuild) output.name = pascalcase(pkg.name);
 
-  const shouldEmitDeclarations = !hasTSChecked;
-
+  const shouldEmitDeclarations = true;
   const tsPlugin = ts({
     check: !hasTSChecked,
     tsconfig: path.resolve(__dirname, 'tsconfig.json'),
