@@ -9,6 +9,7 @@ Material Design Icons for Vue 3.
 - SVG based icons.
 - Supports Vue 3.
 - Treeshaking supported.
+- Supports typescript.
 
 ## Installation
 
