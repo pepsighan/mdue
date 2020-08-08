@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ab-testing></ab-testing>
+    <ab-testing style="color: gray; font-size: 64px;"></ab-testing>
   </div>
 </template>
 
@@ -21,8 +21,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: blue;
   margin-top: 60px;
-  font-size: 1.5rem;
 }
 </style>
