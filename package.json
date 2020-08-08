@@ -1,0 +1,16 @@
+{
+  "name": "mdue-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vyperium/mdue.git",
+  "author": "Sharad Chand <pepsighan@sharadchand.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "@mdi/svg": "^5.0.45",
+    "@mdi/util": "^0.3.0"
+  }
+}

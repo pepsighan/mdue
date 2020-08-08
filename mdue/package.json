@@ -1,0 +1,58 @@
+{
+  "name": "mdue",
+  "version": "0.0.0",
+  "description": "Some awesome description",
+  "main": "dist/mdue.cjs.js",
+  "browser": "dist/mdue.esm.js",
+  "unpkg": "dist/mdue.global.js",
+  "jsdelivr": "dist/mdue.global.js",
+  "module": "dist/mdue.esm-bundler.js",
+  "types": "dist/mdue.d.ts",
+  "sideEffects": false,
+  "author": {
+    "name": "Sharad Chand",
+    "email": "pepsighan@sharadchand.com"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "lint": "prettier -c --parser typescript \"{src,__tests__,e2e}/**/*.[jt]s?(x)\"",
+    "lint:fix": "yarn run lint --write"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/mdue.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@types/jsdom": "^16.2.3",
+    "@vue/compiler-sfc": "^3.0.0-rc.5",
+    "@vue/test-utils": "^2.0.0-beta.1",
+    "pascalcase": "^1.0.0",
+    "prettier": "^2.0.5",
+    "rollup": "^2.23.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-vue": "^6.0.0-beta.10",
+    "typescript": "^3.9.7",
+    "vue": "^3.0.0-rc.5",
+    "yorkie": "^2.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0-beta.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vyperium/mdue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vyperium/mdue/issues"
+  },
+  "homepage": "https://github.com/vyperium/mdue#readme"
+}
