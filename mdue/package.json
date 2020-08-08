@@ -7,7 +7,7 @@
   "unpkg": "dist/mdue.global.js",
   "jsdelivr": "dist/mdue.global.js",
   "module": "dist/mdue.esm-bundler.js",
-  "types": "dist/mdue.d.ts",
+  "types": "dist/src/index.d.ts",
   "sideEffects": false,
   "author": {
     "name": "Sharad Chand",
