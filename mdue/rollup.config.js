@@ -1,6 +1,5 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import VuePlugin from 'rollup-plugin-vue';
 import replace from '@rollup/plugin-replace';
 import pascalcase from 'pascalcase';
 import path from 'path';
@@ -129,7 +128,6 @@ function createConfig(format, output, plugins = []) {
       ),
       ...nodePlugins,
       ...plugins,
-      VuePlugin(),
     ],
     output,
     // onwarn: (msg, warn) => {
