@@ -1,6 +1,6 @@
 # mdue
 
-![Bundle Size](https://badgen.net/bundlephobia/minzip/mdue) ![npm version](https://badgen.net/npm/v/mdue) ![types](https://badgen.net/npm/types/mdue) ![license](https://badgen.net/github/license/vyperium/mdue)
+![npm version](https://badgen.net/npm/v/mdue) ![types](https://badgen.net/npm/types/mdue) ![license](https://badgen.net/npm/license/mdue)
 
 Material Design Icons for Vue 3.
 
