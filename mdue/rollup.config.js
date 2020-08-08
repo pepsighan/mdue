@@ -26,8 +26,9 @@ const banner = `/*!
   * @license MIT
   */`;
 
-// ensure TS checks only once for each build
-let hasTSChecked = false;
+// checking for types takes a very-very long time to build. so disabled checking.
+// enable checking when testing a few components (as all components are generated).
+let hasTSChecked = true;
 
 const outputConfigs = {
   // each file name has the format: `dist/${name}.${format}.js`
