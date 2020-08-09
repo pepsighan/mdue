@@ -14,7 +14,7 @@ if (fs.existsSync(indexFile)) {
 const components = meta.map((icon) => {
   const name = pascalCase(icon.name);
 
-  return `const path${name} = /*#__PURE__*/createVNode("path", { d: "${icon.path}" }, null, -1 /* HOISTED */);
+  return `const path${name} = /*#__PURE__*/createVNode('path', { d: '${icon.path}' }, null, -1 /* HOISTED */);
 export const ${name}: IconComponent = defineComponent({
   name: '${name}',
   render: () => {
@@ -35,7 +35,6 @@ const svgCommonProps = {
   xmlns: 'http://www.w3.org/2000/svg',
   'xmlns:xlink': 'http://www.w3.org/1999/xlink',
   version: '1.1',
-  stroke: 'currentColor',
   fill: 'currentColor',
   height: '1em',
   width: '1em',
