@@ -10,6 +10,7 @@ Material Design Icons for Vue 3. This library has over 5,400+ icons thanks to th
 - Supports Vue 3.
 - Treeshaking supported.
 - Supports typescript.
+- Stylable using CSS (inherits color and font size).
 
 ## Installation
 
