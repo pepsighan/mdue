@@ -1,7 +1,7 @@
 {
   "name": "mdue",
-  "version": "0.1.1",
-  "description": "Some awesome description",
+  "version": "0.1.2",
+  "description": "Material Design Icons for Vue 3",
   "main": "dist/mdue.cjs.js",
   "browser": "dist/mdue.esm.js",
   "unpkg": "dist/mdue.global.js",
