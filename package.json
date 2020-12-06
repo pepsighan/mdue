@@ -10,8 +10,8 @@
     "build": "node index.js"
   },
   "dependencies": {
-    "@mdi/svg": "^5.0.45",
-    "@mdi/util": "^0.3.0",
-    "pascal-case": "^3.1.1"
+    "@mdi/svg": "^5.8.55",
+    "@mdi/util": "^0.3.2",
+    "pascal-case": "^3.1.2"
   }
 }
