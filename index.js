@@ -15,7 +15,7 @@ const components = meta.map((icon) => {
   const name = pascalCase(icon.name);
 
   return `const path${name} = /*#__PURE__*/createVNode('path', { d: '${icon.path}' }, null, -1 /* HOISTED */);
-export const ${name}: IconComponent = defineComponent({
+export const ${name}: /*#__PURE__*/IconComponent = defineComponent({
   name: '${name}',
   render: () => {
     return (openBlock(), createBlock('svg', svgCommonProps, [path${name}]));
