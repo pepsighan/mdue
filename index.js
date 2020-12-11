@@ -13,14 +13,7 @@ if (fs.existsSync(indexFile)) {
 // Write components for each of the icon and expose them.
 const components = meta.map((icon) => {
   const name = pascalCase(icon.name);
-
-  return `const path${name} = /*#__PURE__*/createVNode('path', { d: '${icon.path}' }, null, -1 /* HOISTED */);
-export const ${name}: /*#__PURE__*/IconComponent = defineComponent({
-  name: '${name}',
-  render: () => {
-    return (openBlock(), createBlock('svg', svgCommonProps, [path${name}]));
-  },
-});`;
+  return `export const ${name} = /*#__PURE__*/ svgComponent(name, '${icon.path}');`;
 });
 
 // Export the vue components from the index.ts.
@@ -40,6 +33,15 @@ const svgCommonProps = {
   width: '1em',
   viewBox: '0 0 24 24',
 };
+
+const vnode = (path: string) => createVNode('path', { d: path }, null, -1 /* HOISTED */);
+
+const svgComponent = (name: string, path: string): IconComponent => defineComponent({
+  name,
+  render: () => {
+    return (openBlock(), createBlock('svg', svgCommonProps, [vnode(path)]));
+  },
+});
 
 ${components.join('\n')}
 `;

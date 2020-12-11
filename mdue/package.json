@@ -1,6 +1,6 @@
 {
   "name": "mdue",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Material Design Icons for Vue 3",
   "main": "dist/mdue.cjs.js",
   "browser": "dist/mdue.esm.js",
@@ -45,7 +45,7 @@
     "yorkie": "^2.0.0"
   },
   "peerDependencies": {
-    "vue": "^3.0.0-beta.20"
+    "vue": "^3.0.0"
   },
   "repository": {
     "type": "git",

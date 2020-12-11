@@ -5,6 +5,5 @@
   "trailingComma": "es5",
   "bracketSpacing": true,
   "useTabs": false,
-  "semi": true,
-  "editor.formatOnSave": true
+  "semi": true
 }
