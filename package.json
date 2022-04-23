@@ -1,6 +1,6 @@
 {
   "name": "mdue-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "https://github.com/vyperium/mdue.git",
   "author": "Sharad Chand <pepsighan@sharadchand.com>",
@@ -10,7 +10,7 @@
     "build": "node index.js"
   },
   "dependencies": {
-    "@mdi/svg": "^5.8.55",
+    "@mdi/svg": "^6.5.95",
     "@mdi/util": "^0.3.2",
     "pascal-case": "^3.1.2"
   }

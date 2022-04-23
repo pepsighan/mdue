@@ -2,40 +2,40 @@
 # yarn lockfile v1
 
 
-"@mdi/svg@^5.8.55":
-  version "5.8.55"
-  resolved "https://registry.yarnpkg.com/@mdi/svg/-/svg-5.8.55.tgz#10826b2f68c9169a87bac6b4b78150891858533e"
-  integrity sha512-RUs3xUOWFouCy+TXG8m0I3JREIyd8TI2mVEdcx/iwdXkdGC5hAcd3NWO4yFqfPceZAS9hbzxhYOig7WXvmg9Ag==
+"@mdi/svg@^6.5.95":
+  "integrity" "sha512-Ni1WtA+DZFOW7JcROhlZMQj8KLn66PyGPvqmyQx8/gC5ZwV8bUID4lN65d1/pMcph8wqZZOTPWOJz5F96Y82oQ=="
+  "resolved" "https://registry.npmjs.org/@mdi/svg/-/svg-6.6.96.tgz"
+  "version" "6.6.96"
 
 "@mdi/util@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@mdi/util/-/util-0.3.2.tgz#8964f14ad86f9a355042824553958cc01a94886f"
-  integrity sha512-0ICbKIcsI+OYSqz6SWsYVJA6+kM+irQQiwYGBtJlq0a0sI0JrB2bCrc4S/xVfexqwa1EG8dlSY/ohsQllEXnyQ==
+  "integrity" "sha512-0ICbKIcsI+OYSqz6SWsYVJA6+kM+irQQiwYGBtJlq0a0sI0JrB2bCrc4S/xVfexqwa1EG8dlSY/ohsQllEXnyQ=="
+  "resolved" "https://registry.npmjs.org/@mdi/util/-/util-0.3.2.tgz"
+  "version" "0.3.2"
 
-lower-case@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-2.0.2.tgz#6fa237c63dbdc4a82ca0fd882e4722dc5e634e28"
-  integrity sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==
+"lower-case@^2.0.2":
+  "integrity" "sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg=="
+  "resolved" "https://registry.npmjs.org/lower-case/-/lower-case-2.0.2.tgz"
+  "version" "2.0.2"
   dependencies:
-    tslib "^2.0.3"
+    "tslib" "^2.0.3"
 
-no-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/no-case/-/no-case-3.0.4.tgz#d361fd5c9800f558551a8369fc0dcd4662b6124d"
-  integrity sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==
+"no-case@^3.0.4":
+  "integrity" "sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg=="
+  "resolved" "https://registry.npmjs.org/no-case/-/no-case-3.0.4.tgz"
+  "version" "3.0.4"
   dependencies:
-    lower-case "^2.0.2"
-    tslib "^2.0.3"
+    "lower-case" "^2.0.2"
+    "tslib" "^2.0.3"
 
-pascal-case@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/pascal-case/-/pascal-case-3.1.2.tgz#b48e0ef2b98e205e7c1dae747d0b1508237660eb"
-  integrity sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==
+"pascal-case@^3.1.2":
+  "integrity" "sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g=="
+  "resolved" "https://registry.npmjs.org/pascal-case/-/pascal-case-3.1.2.tgz"
+  "version" "3.1.2"
   dependencies:
-    no-case "^3.0.4"
-    tslib "^2.0.3"
+    "no-case" "^3.0.4"
+    "tslib" "^2.0.3"
 
-tslib@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
-  integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
+"tslib@^2.0.3":
+  "integrity" "sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ=="
+  "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.0.3.tgz"
+  "version" "2.0.3"
